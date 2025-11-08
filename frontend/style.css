@@ -1,0 +1,134 @@
+@import url("https://fonts.googleapis.com/css2?family=Darumadrop+One&family=VT323&display=swap");
+body {
+  background-color: #7E886D;
+}
+
+body {
+  overflow: hidden;
+}
+
+body, p, a, h1, h2 {
+  margin: 0;
+  padding: 0;
+}
+
+#root {
+  --bg-url: url("https://i.postimg.cc/fbhw6hzJ/bg-home-2.png");
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+}
+#root::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: var(--bg-url) center no-repeat;
+  background-size: cover;
+}
+
+.main-wrapper {
+  --gameboy: url("https://i.postimg.cc/zv8f0g4B/bg-gameboy.png");
+  --base-scale: 1;
+  --zoom: 1;
+  --y-shift: 0px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 1920px;
+  height: 1080px;
+  /*--smoothly change size according to browser size*/
+  transform: translate(-50%, calc(-50% + var(--y-shift) * var(--base-scale))) scale(calc(var(--base-scale) * var(--zoom)));
+  transition: transform 0.9s cubic-bezier(0.16, 1, 0.3, 1);
+  will-change: transform;
+  /*--*/
+}
+.main-wrapper.zoomed {
+  --zoom: 1.75;
+  --y-shift: 380px;
+}
+.main-wrapper::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: var(--gameboy) center no-repeat;
+  background-size: contain;
+}
+
+.gamecard-acc, .gamecard-oaw {
+  position: absolute;
+  width: 500px;
+  transition: width 0.2s;
+}
+.gamecard-acc img, .gamecard-oaw img {
+  width: 100%;
+}
+.gamecard-acc:hover, .gamecard-oaw:hover {
+  width: 650px;
+}
+
+.gamecard-acc {
+  top: 600px;
+}
+.gamecard-acc:hover {
+  top: 500px;
+}
+
+.gamecard-oaw {
+  top: 150px;
+  right: 50px;
+}
+.gamecard-oaw:hover {
+  top: 120px;
+  right: 20px;
+}
+
+/*---ADMIN PANEL---*/
+.admin-container {
+  position: absolute;
+  inset: 20px 100px;
+  padding: 0 20px;
+  border-radius: 10px;
+  background-color: #7E886D;
+  color: #24371b;
+  font-family: "VT323", monospace;
+  font-size: 24px;
+  text-align: center;
+}
+.admin-container h2 {
+  font-family: "Darumadrop One", sans-serif;
+  font-size: 40px;
+}
+.admin-container a, .admin-container button {
+  font-family: "Darumadrop One", sans-serif;
+  font-size: 24px;
+  color: transparent;
+  background-color: transparent;
+  -webkit-text-stroke-width: 1px;
+  -webkit-text-stroke-color: #24371B;
+  text-decoration: none;
+  border: 2px solid #24371B;
+  border-radius: 5px;
+  padding: 3px 15px 7px;
+  cursor: pointer;
+}
+.admin-container a:hover, .admin-container button:hover {
+  background-color: #24371B;
+  -webkit-text-stroke-width: 1px;
+  -webkit-text-stroke-color: #7B846B;
+}
+.admin-container table {
+  border: 2px solid #24371b;
+  border-radius: 10px;
+  width: 100%;
+  margin-top: 20px;
+  border-collapse: collapse;
+}
+.admin-container table th, .admin-container table td {
+  border: 2px solid #24371b;
+}
+.admin-container table th {
+  padding: 10px 0;
+}
+.admin-container table td:nth-child(1) {
+  width: 30%;
+}/*# sourceMappingURL=style.css.map */

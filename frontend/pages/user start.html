@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Start | On A Whim</title>
+    <link rel="icon" type="image--" href="https://i.postimg.cc/28h9NBqc/image-26.png"> <!--web icon-->
+    <link rel="stylesheet" href="../style.css"> <!--includes index page style-->
+    <link rel="stylesheet" href="style/pages.css"> <!--for all pages style-->
+
+    <!--jquery library for animating elements-->
+    <link rel="stylesheet" href="https://code.jquery.com/ui/1.13.3/themes/smoothness/jquery-ui.css">
+    <script src="https://code.jquery.com/jquery-3.7.1.js"></script>
+    <script src="https://code.jquery.com/ui/1.13.3/jquery-ui.js"></script>
+</head>
+<body>
+    <div id="root">
+        <!--gameboy-->
+        <div class="main-wrapper">
+            <div class="screen">
+                <div class="titlescreen user">
+                    <h1>On A Whim</h1>
+                    <h1 class="h-style2">User</h1>
+                    <img src="https://i.postimg.cc/9fZGgsLP/bg-titlescreen.png" alt="">
+                </div>
+
+                <div class="selectscreen user">
+                    <h1>On A Whim</h1>
+                    <h1 class="h-style2">User</h1>
+                    
+                    <div class="nav user">
+                        <div class="nav-btn">
+                            <img src="https://i.postimg.cc/vB2ftLn2/forwardarrow.png" alt="">
+                            <a href="login.html" class="navstyle">Account</a>
+                            <img src="https://i.postimg.cc/pTZTx2kN/backarrow.png" alt="">
+                        </div>
+                        <div class="nav-btn">
+                            <img src="https://i.postimg.cc/vB2ftLn2/forwardarrow.png" alt="">
+                            <a href="activities.html" class="navstyle">Activities</a>
+                            <img src="https://i.postimg.cc/pTZTx2kN/backarrow.png" alt="">
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="homebtn">
+                    <a href="/index.html"><img src="https://i.postimg.cc/ZYBk6LNm/homebtn2.png" alt=""></a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="style/pages.js"></script>
+    <script>
+        $(function() {
+  $(".titlescreen").show("clip", { direction: "vertical" }, 800, function(){
+    setTimeout(function(){
+      $(".titlescreen").hide();
+      $(".selectscreen").show("blind", 800);
+    }, 1500)
+  });
+});
+    </script>
+</body>
+</html>

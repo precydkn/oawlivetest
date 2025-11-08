@@ -1,0 +1,435 @@
+@import url('https://fonts.googleapis.com/css2?family=Darumadrop+One&family=VT323&display=swap');
+@font-face {
+    font-family: "Pixelout";
+    src: url("../fonts/Pixelout Personal Use Only.ttf");
+}
+@font-face {
+    font-family: "Daydream";
+    src: url("../fonts/Daydream Demo.otf");
+}
+
+.screen {
+    // border: 2px dashed red;
+    position: absolute;
+    width: 404px;
+    height: 360px;
+    top: 130px;
+    left: 758px;
+    
+    font-family: "VT323", monospace;
+    font-size: 28px;
+    color: #24371B;
+    text-align: center;
+    letter-spacing: -1px;
+
+    h1 {
+        font-family: Pixelout;
+        font-size: 60px;
+    }
+
+    h1, h2 {
+        font-weight: normal;
+    }
+
+    .navstyle, .h-style2, .act-filter {
+        color: transparent;
+        -webkit-text-stroke-width: 2px;
+        -webkit-text-stroke-color: #24371B;
+    }
+
+    .navstyle, h2, .act-filter {
+        font-family: "Darumadrop One", sans-serif;
+    }
+
+    .navstyle {
+        font-size: 50px;
+
+        &:hover {
+            color: #24371B;
+            -webkit-text-stroke-width: 0;
+        }
+    }
+
+    h2 {
+        margin-top: 20px;
+    }
+
+    .h-style2 {
+        font-family: "Daydream";
+    }
+
+    .p-style {
+        margin: 14px 0;
+    }
+
+    .homebtn {
+        // border: 1px dashed lightblue;
+        position: absolute;
+        right: -5px;
+        bottom: -145px;
+
+        img {
+            width: 170px;
+            transform: rotate(7.69deg);
+            mix-blend-mode: difference;
+        }
+    }
+
+    .backbtn {
+        // border: 1px dashed lightblue;
+        position: absolute;
+        right: 0;
+        bottom: -130px;
+
+        img {
+            width: 175px;
+            transform: rotate(-7deg);
+            mix-blend-mode: multiply;
+        }
+    }
+
+    .catgif {
+        text-align: right;
+        img {
+            width: 100px;
+            mix-blend-mode: multiply;
+            margin: -30px 10px 0 0;
+        }
+    }
+}
+
+// add border for jquery animation to work
+.titlescreen, .selectscreen {
+    border: 1px dashed transparent;
+    display: none;
+    width: 404px;
+    height: 360px;
+}
+
+.titlescreen {
+    img {
+        mix-blend-mode: overlay;
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        inset: 0;
+    }
+
+    h1 {
+        font-size: 80px;
+        margin-top: 90px;
+    }
+    
+    &.user {
+        h1 {
+            margin: 60px 0 25px;
+        }
+
+        h1.h-style2 {
+            font-size: 40px;
+            margin-top: -30px;
+        }
+    }
+} // for: 'start', 'user start'
+
+.generatescreen {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+
+    .select-type-screen {
+        .act-types {
+            // border: 1px dashed lightgray;
+            margin-top: 15px;
+            margin-left: 40px;
+            text-align: left;
+            display: flex;
+            justify-content: center;
+
+            color: transparent;
+            -webkit-text-stroke: #24371B;
+            -webkit-text-stroke-width: 0.7px;
+            font-size: 30px;
+
+            .ltypes, .rtypes {
+                // border: 1px dashed lightgreen;
+                width: max-content;
+
+                div {
+                    // border: 1px dashed lightgreen;
+                    display: flex;
+                    align-items: center;
+                    margin-top: -15px;
+
+                    img {
+                        height: 50px;
+                        margin-top: 5px;
+                        visibility: hidden;
+                        mix-blend-mode: darken;
+                    }
+                }
+
+                div:hover, .typeselected {
+                    cursor: pointer;
+                    color: #24371B;
+                    -webkit-text-stroke-width: 0;
+
+                    img {
+                        visibility: visible;
+                    }
+                }
+            }
+        }
+
+        .getbtn {
+            font-family: "Darumadrop One", sans-serif;
+            border: 3px solid #24371B;
+            border-radius: 5px;
+            margin-top: 10px;
+            padding: 0 10px 10px;
+            display: inline-block;
+            cursor: pointer;
+
+            &:hover {
+                background-color: #24371B;
+                -webkit-text-stroke-width: 1.5px;
+                -webkit-text-stroke-color: #7B846B;
+            }
+        }
+    }
+
+    .display-act-screen, .loading-screen {
+        display: none; // initially hide
+    }
+
+    .loading-screen {
+        img {
+            width: 150px;
+            margin-bottom: -20px;
+            mix-blend-mode: darken;
+        }        
+    }
+} // for: 'generate'
+
+.selectscreen, .userscreen { 
+    // border: 1px dashed lightgoldenrodyellow;
+    
+    h1 {
+        margin-top: 40px;
+    }
+
+    h1.h-style2 {
+        font-size: 25px;
+        margin: -20px 30px 5px 0;
+        text-align: right;
+    }
+    
+    .nav {
+        margin-top: 50px;
+
+        &.user {
+            margin-top: 25px;
+        }
+
+        a {
+            // border: 1px dashed green;
+            cursor: pointer;
+            line-height: 1;
+            text-decoration: none;
+        }
+
+        .nav-btn {
+            // border: 1px dashed green;
+            display: flex;
+            justify-content: center;
+            margin-bottom: -20px;
+            
+            img {
+                width: 75px;
+                margin-top: -5px;
+                visibility: hidden;
+            }
+
+            &:hover {
+                img {
+                    visibility: visible;
+                }
+            }
+        }
+    }
+} // selectscreen, for: 'start', 'user start'; userscreen, for: 'login', 'signup'
+
+.userscreen {
+    .form-container {
+        p {
+            font-size: 20px;
+
+            a {
+                color: transparent;
+                -webkit-text-stroke-width: 0.8px;
+                -webkit-text-stroke-color: #24371B;
+                text-decoration: none;
+
+                &:hover {
+                    color:#24371B;
+                    -webkit-text-stroke-width: 0;
+                }
+            }
+        }
+
+        #errorMessage {
+            font-size: 16px;
+            color: #7B846B;
+            background-color: #24371B;
+            display: inline-block;
+        }
+    }
+
+    .form-container.login {
+        margin-top: 20px;
+    }
+    
+    #loginForm, #signupForm {
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 5px;
+
+        input, button {
+            font-family: "VT323", monospace;
+            font-size: 20px;
+            border-radius: 5px;
+            border: 2px solid #24371B;
+            background-color: transparent;
+            color: #24371B;
+            margin: 5px;
+        }
+
+        input {
+            padding: 7px;
+
+            &::placeholder {
+                color: #24371B;
+            }
+
+            &:focus {
+                background-color: #24371B;
+                color:#7B846B;
+                outline: none;
+            }
+
+            &:is(:-webkit-autofill, :autofill) {
+                background-color: transparent;
+                color: #24371B;
+            }
+        }
+        
+        button:hover {
+            cursor: pointer;
+            background-color: #24371B;
+            color: #7B846B;
+        }
+    }
+
+    /*autofill style*/
+    input:-webkit-autofill:hover, 
+    input:-webkit-autofill:focus,
+    textarea:-webkit-autofill:hover,
+    textarea:-webkit-autofill:focus,
+    select:-webkit-autofill:hover,
+    select:-webkit-autofill:focus {
+        font-family:  "VT323", monospace;
+        -webkit-text-fill-color: #7B846B;
+        -webkit-box-shadow: 0 0 0px 1000px #24371B inset;
+    }
+
+    input:-webkit-autofill, textarea:-webkit-autofill, select:-webkit-autofill {
+        -webkit-text-fill-color: #24371B;
+        -webkit-box-shadow: 0 0 0px 1000px rgb(123, 132, 107) inset;
+        background-color: transparent;
+    }
+} // for: 'login', 'signup'
+
+.actscreen {
+    // border: 1px dashed lightgoldenrodyellow;
+
+    h2 {
+        margin: 0;
+    }
+
+    /*.act-filter {
+        // border: 1px dashed lightblue;
+        margin-top: -10px;
+        display: flex;
+        justify-content: center;
+        gap: 20px;
+        cursor: pointer;
+        -webkit-text-stroke-width: 1.5px;
+
+        div:hover, div.current-filter {
+            color: #24371B;
+            -webkit-text-stroke-width: 0;
+        }
+
+        div.current-filter {
+            text-decoration: underline;
+        }
+    }*/
+    
+    .act-filter {
+        // border: 1px dashed lightblue;
+        display: flex;
+        justify-content: space-between;
+        margin: 5px 80px 0;
+        font-size: 22px;
+        border: 1.5px solid #24371B;
+
+        cursor: pointer;
+
+        p {
+            -webkit-text-stroke-width: 1.2px;
+            margin-top: -5px;
+        }
+
+        div:hover, div.current-filter {
+            background-color: #24371B;
+            color: #24371B;
+            -webkit-text-stroke-color: #7B846B;
+        }
+
+        div {
+            // border: 1px dashed white;
+            width: 100%;
+        }
+    }
+
+    .acts {
+        // border: 1px dashed lightsalmon;
+        text-align: left;
+        overflow-y: auto;
+        margin-top: 10px;
+        height: 255px;
+
+        ol {
+            margin-top: 0;
+        }
+    }
+} // for: 'activities'
+
+// scrollbar
+::-webkit-scrollbar {
+    width: 8px;
+}
+::-webkit-scrollbar-track {
+    border: 2px solid #24371B;
+}
+::-webkit-scrollbar-thumb {
+    background: #24371B;
+    border: 2px solid #24371B;
+}
+
+// page highlight style
+::selection {
+  background: gray;
+  color: darkgray;
+}

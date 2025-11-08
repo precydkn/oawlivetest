@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OAW | Generate</title>
+    <link rel="icon" type="image--" href="https://i.postimg.cc/KjvdMsfV/image-32.png"> <!--web icon-->
+    <link rel="stylesheet" href="../style.css"> <!--includes index page style-->
+    <link rel="stylesheet" href="style/pages.css"> <!--for all pages style-->
+    
+    <!--jquery library for animating elements-->
+    <link rel="stylesheet" href="https://code.jquery.com/ui/1.13.3/themes/smoothness/jquery-ui.css">
+    <script src="https://code.jquery.com/jquery-3.7.1.js"></script>
+    <script src="https://code.jquery.com/ui/1.13.3/jquery-ui.js"></script>
+</head>
+<body>
+    <div id="root">
+        <!--gameboy-->
+        <div class="main-wrapper zoomed">
+            <div class="screen generatescreen">
+                <div class="select-type-screen">
+                    <p>Select a type of activity before generating.</p>
+                    <div class="act-types">
+                        <div class="ltypes">
+                            <div id="busywork">
+                                <p>busywork</p>
+                                <img src="https://i.postimg.cc/pTZTx2kN/backarrow.png" alt="">
+                            </div>
+                            <div id="charity">
+                                <p>charity</p>
+                                <img src="https://i.postimg.cc/pTZTx2kN/backarrow.png" alt="">
+                            </div>
+                            <div id="cooking">
+                                <p>cooking</p>
+                                <img src="https://i.postimg.cc/pTZTx2kN/backarrow.png" alt="">
+                            </div>
+                            <div id="education">
+                                <p>education</p>
+                                <img src="https://i.postimg.cc/pTZTx2kN/backarrow.png" alt="">
+                            </div>
+                        </div>
+                        <div class="rtypes">
+                            <div id="recreational">
+                                <p>recreational</p>
+                                <img src="https://i.postimg.cc/pTZTx2kN/backarrow.png" alt="">
+                            </div>
+                            <div id="relaxation">
+                                <p>relaxation</p>
+                                <img src="https://i.postimg.cc/pTZTx2kN/backarrow.png" alt="">
+                            </div>
+                            <div id="social">
+                                <p>social</p>
+                                <img src="https://i.postimg.cc/pTZTx2kN/backarrow.png" alt="">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="getbtn"><p>Get Activity</p></div>
+                </div>
+
+                <div class="loading-screen">
+                    <img src="https://i.postimg.cc/kMQXBP8B/loading-cat.gif" alt="">
+                    <p>Generating activity...</p>
+                </div>
+
+                <div class="display-act-screen">
+                    <div>
+                        <p class="activity-text">activity</p>
+                    </div>
+                    <div class="actbtns">
+                        <div class="addbtn"></div>
+                        <div class="retrybtn"></div>
+                    </div>
+                </div>
+
+                <div class="backbtn">
+                    <a href="start.html"><img src="https://i.postimg.cc/RC6rwTtB/backbtn.png" alt=""></a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="style/pages.js"></script>
+</body>
+</html>

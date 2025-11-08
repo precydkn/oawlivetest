@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login | On A Whim</title>
+    <link rel="icon" type="image--" href="https://i.postimg.cc/8zGKpPM8/image-40.png"> <!--web icon-->
+    <link rel="stylesheet" href="../style.css"> <!--includes index page style-->
+    <link rel="stylesheet" href="style/pages.css"> <!--for all pages style-->
+
+    <!--jquery library for animating elements-->
+    <link rel="stylesheet" href="https://code.jquery.com/ui/1.13.3/themes/smoothness/jquery-ui.css">
+    <script src="https://code.jquery.com/jquery-3.7.1.js"></script>
+    <script src="https://code.jquery.com/ui/1.13.3/jquery-ui.js"></script>
+</head>
+<body>
+    <div id="root">
+        <!--gameboy-->
+        <div class="main-wrapper zoomed">
+            <div class="screen">
+                <div class="userscreen">
+                    <h1>On A Whim</h1>
+                    <h1 class="h-style2">User</h1>
+                    
+                    <div class="form-container login">
+                        <form id="loginForm">
+                            <input type="email" id="email" placeholder="Email" required>
+                            <input type="password" id="password" placeholder="Password" required>
+                            <div><button type="submit">Log In</button></div>
+                        </form>
+                        <p>Don’t have an account? <a href="signup.html" class="signupbtn">Sign up</a></p>
+                        <p id="errorMessage"></p>
+                    </div>
+                </div>
+                
+                <div class="backbtn">
+                    <a href="user start.html"><img src="https://i.postimg.cc/RC6rwTtB/backbtn.png" alt=""></a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="style/pages.js"></script> <!--script for animations, functions, & styles-->
+    <script src="/frontend/script.js"></script> <!--script for backend-->
+    <script>
+        $(function() {
+  $(".userscreen").show("blind", 800)});
+    </script>
+</body>
+</html>

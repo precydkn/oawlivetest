@@ -1,0 +1,360 @@
+@import url("https://fonts.googleapis.com/css2?family=Darumadrop+One&family=VT323&display=swap");
+@font-face {
+  font-family: "Pixelout";
+  src: url("../fonts/Pixelout Personal Use Only.ttf");
+}
+@font-face {
+  font-family: "Daydream";
+  src: url("../fonts/Daydream Demo.otf");
+}
+.screen {
+  position: absolute;
+  width: 404px;
+  height: 360px;
+  top: 130px;
+  left: 758px;
+  font-family: "VT323", monospace;
+  font-size: 28px;
+  color: #24371B;
+  text-align: center;
+  letter-spacing: -1px;
+}
+.screen h1 {
+  font-family: Pixelout;
+  font-size: 60px;
+}
+.screen h1, .screen h2 {
+  font-weight: normal;
+}
+.screen .navstyle, .screen .h-style2, .screen .act-filter {
+  color: transparent;
+  -webkit-text-stroke-width: 2px;
+  -webkit-text-stroke-color: #24371B;
+}
+.screen .navstyle, .screen h2, .screen .act-filter {
+  font-family: "Darumadrop One", sans-serif;
+}
+.screen .navstyle {
+  font-size: 50px;
+}
+.screen .navstyle:hover {
+  color: #24371B;
+  -webkit-text-stroke-width: 0;
+}
+.screen h2 {
+  margin-top: 20px;
+}
+.screen .h-style2 {
+  font-family: "Daydream";
+}
+.screen .p-style {
+  margin: 14px 0;
+}
+.screen .homebtn {
+  position: absolute;
+  right: -5px;
+  bottom: -145px;
+}
+.screen .homebtn img {
+  width: 170px;
+  transform: rotate(7.69deg);
+  mix-blend-mode: difference;
+}
+.screen .backbtn {
+  position: absolute;
+  right: 0;
+  bottom: -130px;
+}
+.screen .backbtn img {
+  width: 175px;
+  transform: rotate(-7deg);
+  mix-blend-mode: multiply;
+}
+.screen .catgif {
+  text-align: right;
+}
+.screen .catgif img {
+  width: 100px;
+  mix-blend-mode: multiply;
+  margin: -30px 10px 0 0;
+}
+
+.titlescreen, .selectscreen {
+  border: 1px dashed transparent;
+  display: none;
+  width: 404px;
+  height: 360px;
+}
+
+.titlescreen img {
+  mix-blend-mode: overlay;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  inset: 0;
+}
+.titlescreen h1 {
+  font-size: 80px;
+  margin-top: 90px;
+}
+.titlescreen.user h1 {
+  margin: 60px 0 25px;
+}
+.titlescreen.user h1.h-style2 {
+  font-size: 40px;
+  margin-top: -30px;
+}
+
+.generatescreen {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+.generatescreen .select-type-screen .act-types {
+  margin-top: 15px;
+  margin-left: 40px;
+  text-align: left;
+  display: flex;
+  justify-content: center;
+  color: transparent;
+  -webkit-text-stroke: #24371B;
+  -webkit-text-stroke-width: 0.7px;
+  font-size: 30px;
+}
+.generatescreen .select-type-screen .act-types .ltypes, .generatescreen .select-type-screen .act-types .rtypes {
+  width: -moz-max-content;
+  width: max-content;
+}
+.generatescreen .select-type-screen .act-types .ltypes div, .generatescreen .select-type-screen .act-types .rtypes div {
+  display: flex;
+  align-items: center;
+  margin-top: -15px;
+}
+.generatescreen .select-type-screen .act-types .ltypes div img, .generatescreen .select-type-screen .act-types .rtypes div img {
+  height: 50px;
+  margin-top: 5px;
+  visibility: hidden;
+  mix-blend-mode: darken;
+}
+.generatescreen .select-type-screen .act-types .ltypes div:hover, .generatescreen .select-type-screen .act-types .ltypes .typeselected, .generatescreen .select-type-screen .act-types .rtypes div:hover, .generatescreen .select-type-screen .act-types .rtypes .typeselected {
+  cursor: pointer;
+  color: #24371B;
+  -webkit-text-stroke-width: 0;
+}
+.generatescreen .select-type-screen .act-types .ltypes div:hover img, .generatescreen .select-type-screen .act-types .ltypes .typeselected img, .generatescreen .select-type-screen .act-types .rtypes div:hover img, .generatescreen .select-type-screen .act-types .rtypes .typeselected img {
+  visibility: visible;
+}
+.generatescreen .select-type-screen .getbtn {
+  font-family: "Darumadrop One", sans-serif;
+  border: 3px solid #24371B;
+  border-radius: 5px;
+  margin-top: 10px;
+  padding: 0 10px 10px;
+  display: inline-block;
+  cursor: pointer;
+}
+.generatescreen .select-type-screen .getbtn:hover {
+  background-color: #24371B;
+  -webkit-text-stroke-width: 1.5px;
+  -webkit-text-stroke-color: #7B846B;
+}
+.generatescreen .display-act-screen, .generatescreen .loading-screen {
+  display: none;
+}
+.generatescreen .loading-screen img {
+  width: 150px;
+  margin-bottom: -20px;
+  mix-blend-mode: darken;
+}
+
+.selectscreen h1, .userscreen h1 {
+  margin-top: 40px;
+}
+.selectscreen h1.h-style2, .userscreen h1.h-style2 {
+  font-size: 25px;
+  margin: -20px 30px 5px 0;
+  text-align: right;
+}
+.selectscreen .nav, .userscreen .nav {
+  margin-top: 50px;
+}
+.selectscreen .nav.user, .userscreen .nav.user {
+  margin-top: 25px;
+}
+.selectscreen .nav a, .userscreen .nav a {
+  cursor: pointer;
+  line-height: 1;
+  text-decoration: none;
+}
+.selectscreen .nav .nav-btn, .userscreen .nav .nav-btn {
+  display: flex;
+  justify-content: center;
+  margin-bottom: -20px;
+}
+.selectscreen .nav .nav-btn img, .userscreen .nav .nav-btn img {
+  width: 75px;
+  margin-top: -5px;
+  visibility: hidden;
+}
+.selectscreen .nav .nav-btn:hover img, .userscreen .nav .nav-btn:hover img {
+  visibility: visible;
+}
+
+.userscreen {
+  /*autofill style*/
+}
+.userscreen .form-container p {
+  font-size: 20px;
+}
+.userscreen .form-container p a {
+  color: transparent;
+  -webkit-text-stroke-width: 0.8px;
+  -webkit-text-stroke-color: #24371B;
+  text-decoration: none;
+}
+.userscreen .form-container p a:hover {
+  color: #24371B;
+  -webkit-text-stroke-width: 0;
+}
+.userscreen .form-container #errorMessage {
+  font-size: 16px;
+  color: #7B846B;
+  background-color: #24371B;
+  display: inline-block;
+}
+.userscreen .form-container.login {
+  margin-top: 20px;
+}
+.userscreen #loginForm, .userscreen #signupForm {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 5px;
+}
+.userscreen #loginForm input, .userscreen #loginForm button, .userscreen #signupForm input, .userscreen #signupForm button {
+  font-family: "VT323", monospace;
+  font-size: 20px;
+  border-radius: 5px;
+  border: 2px solid #24371B;
+  background-color: transparent;
+  color: #24371B;
+  margin: 5px;
+}
+.userscreen #loginForm input, .userscreen #signupForm input {
+  padding: 7px;
+}
+.userscreen #loginForm input::-moz-placeholder, .userscreen #signupForm input::-moz-placeholder {
+  color: #24371B;
+}
+.userscreen #loginForm input::placeholder, .userscreen #signupForm input::placeholder {
+  color: #24371B;
+}
+.userscreen #loginForm input:focus, .userscreen #signupForm input:focus {
+  background-color: #24371B;
+  color: #7B846B;
+  outline: none;
+}
+.userscreen #loginForm input:is(:-webkit-autofill, :-webkit-autofill), .userscreen #signupForm input:is(:-webkit-autofill, :-webkit-autofill) {
+  background-color: transparent;
+  color: #24371B;
+}
+.userscreen #loginForm input:is(:-webkit-autofill, :autofill), .userscreen #signupForm input:is(:-webkit-autofill, :autofill) {
+  background-color: transparent;
+  color: #24371B;
+}
+.userscreen #loginForm button:hover, .userscreen #signupForm button:hover {
+  cursor: pointer;
+  background-color: #24371B;
+  color: #7B846B;
+}
+.userscreen input:-webkit-autofill:hover,
+.userscreen input:-webkit-autofill:focus,
+.userscreen textarea:-webkit-autofill:hover,
+.userscreen textarea:-webkit-autofill:focus,
+.userscreen select:-webkit-autofill:hover,
+.userscreen select:-webkit-autofill:focus {
+  font-family: "VT323", monospace;
+  -webkit-text-fill-color: #7B846B;
+  -webkit-box-shadow: 0 0 0px 1000px #24371B inset;
+}
+.userscreen input:-webkit-autofill, .userscreen textarea:-webkit-autofill, .userscreen select:-webkit-autofill {
+  -webkit-text-fill-color: #24371B;
+  -webkit-box-shadow: 0 0 0px 1000px rgb(123, 132, 107) inset;
+  background-color: transparent;
+}
+
+.actscreen {
+  /*.act-filter {
+      // border: 1px dashed lightblue;
+      margin-top: -10px;
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      cursor: pointer;
+      -webkit-text-stroke-width: 1.5px;
+
+      div:hover, div.current-filter {
+          color: #24371B;
+          -webkit-text-stroke-width: 0;
+      }
+
+      div.current-filter {
+          text-decoration: underline;
+      }
+  }*/
+}
+.actscreen h2 {
+  margin: 0;
+}
+.actscreen .act-filter {
+  display: flex;
+  justify-content: space-between;
+  margin: 5px 80px 0;
+  font-size: 22px;
+  border: 1.5px solid #24371B;
+  cursor: pointer;
+}
+.actscreen .act-filter p {
+  -webkit-text-stroke-width: 1.2px;
+  margin-top: -5px;
+}
+.actscreen .act-filter div:hover, .actscreen .act-filter div.current-filter {
+  background-color: #24371B;
+  color: #24371B;
+  -webkit-text-stroke-color: #7B846B;
+}
+.actscreen .act-filter div {
+  width: 100%;
+}
+.actscreen .acts {
+  text-align: left;
+  overflow-y: auto;
+  margin-top: 10px;
+  height: 255px;
+}
+.actscreen .acts ol {
+  margin-top: 0;
+}
+
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  border: 2px solid #24371B;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #24371B;
+  border: 2px solid #24371B;
+}
+
+::-moz-selection {
+  background: gray;
+  color: darkgray;
+}
+
+::selection {
+  background: gray;
+  color: darkgray;
+}/*# sourceMappingURL=pages.css.map */

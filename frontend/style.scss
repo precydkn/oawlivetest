@@ -165,12 +165,10 @@ body, p, a, h1, h2 {
         border: 3px dashed orange;
         height: 1920px;
         transform: translate(-50%, calc(-57% + (var(--y-shift) * var(--base-scale)))) scale(calc(var(--base-scale) * var(--zoom)));
+
+        &.zoomed {
+            --zoom: 4;
+            --y-shift: 1250px;
+        } 
     }
-    /* .main-wrapper::before {
-        background-size: cover;
-    } */
-    .main-wrapper.zoomed {
-        --zoom: 4;
-        --y-shift: 1250px;
-    } 
 }
